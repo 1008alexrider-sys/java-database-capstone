@@ -20,7 +20,7 @@ _As a [user role], I want [feature/goal], so that [reason]._
 ### Project: Smart Clinic Management System  
 
 ---
-# Exercise 2: Define Admin User Stories
+## Admin User Stories
 
 ---
 
@@ -124,7 +124,7 @@ _As an Admin, I want to run a stored procedure in MySQL CLI to retrieve the numb
 - This is a database-level task (outside the Spring Boot application).
 
 
-# Exercise 3: Define Patient User Stories
+## Patient User Stories
 
 ---
 
@@ -249,7 +249,7 @@ _As a Patient, I want to view my upcoming appointments, so that I can prepare ac
 - Data must be filtered using patient ID.
 - Past appointments should not appear in upcoming list.
 
-# Exercise 4: Define Doctor User Stories
+## Doctor User Stories
 
 ---
 
