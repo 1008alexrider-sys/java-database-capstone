@@ -20,226 +20,354 @@ _As a [user role], I want [feature/goal], so that [reason]._
 ### Project: Smart Clinic Management System  
 
 ---
-
-# 1. Overview
-
-This document defines user stories for the Patient Appointment Portal system.  
-The stories are categorized based on three primary roles:
-
-- Admin
-- Patient
-- Doctor
-
-Each story follows the Agile format:
-
-As a <role>,  
-I want to <action>,  
-So that <benefit>.
-
-These stories will guide backend API development, database implementation, and sprint planning.
+# Exercise 2: Define Admin User Stories
 
 ---
 
-# 2. Admin User Stories
+## User Story 1: Admin Login
 
-## Epic: User & System Management
-
-### US-ADMIN-01 – Create User Accounts
-As an Admin,  
-I want to create doctor and patient accounts,  
-So that users can securely access the system.
+**Title:**  
+_As an Admin, I want to log into the portal using my username and password, so that I can securely manage the platform._
 
 **Acceptance Criteria:**
-- Admin must be logged in.
-- Required user details must be validated.
-- Account must be stored in the MySQL database.
-- Success confirmation must be displayed.
+1. Admin must provide valid username and password.
+2. System must authenticate credentials against the database.
+3. Admin dashboard must be displayed upon successful login.
+4. Error message must be shown for invalid credentials.
+
+**Priority:** High  
+**Story Points:** 3  
+
+**Notes:**
+- Passwords must be encrypted in the database.
+- Session management should be implemented.
 
 ---
 
-### US-ADMIN-02 – Update User Information
-As an Admin,  
-I want to update user details,  
-So that the system maintains accurate information.
+## User Story 2: Admin Logout
+
+**Title:**  
+_As an Admin, I want to log out of the portal, so that I can protect system access._
 
 **Acceptance Criteria:**
-- Admin must be able to edit profile fields.
-- Updated data must be persisted in the database.
-- Changes must be reflected immediately.
+1. Logout button must be visible on the dashboard.
+2. Admin session must be invalidated upon logout.
+3. Admin must be redirected to the login page.
+4. Back button should not allow access to secured pages after logout.
+
+**Priority:** High  
+**Story Points:** 2  
+
+**Notes:**
+- Ensure session/token is properly cleared.
+- Prevent unauthorized access after logout.
 
 ---
 
-### US-ADMIN-03 – Deactivate User Accounts
-As an Admin,  
-I want to deactivate users,  
-So that unauthorized access is prevented.
+## User Story 3: Add Doctor Profile
+
+**Title:**  
+_As an Admin, I want to add doctors to the portal, so that patients can book appointments with them._
 
 **Acceptance Criteria:**
-- Deactivated users must not be able to log in.
-- The system must log the deactivation event.
+1. Admin must be logged in.
+2. Required doctor details (name, specialization, contact info) must be validated.
+3. Doctor information must be stored in the MySQL database.
+4. Success confirmation message must be displayed.
+
+**Priority:** High  
+**Story Points:** 5  
+
+**Notes:**
+- Email address must be unique.
+- Default role should be assigned as "DOCTOR".
 
 ---
 
-### US-ADMIN-04 – Monitor Appointments
-As an Admin,  
-I want to view all appointments,  
-So that I can monitor clinic operations.
+## User Story 4: Delete Doctor Profile
+
+**Title:**  
+_As an Admin, I want to delete a doctor's profile from the portal, so that inactive or unavailable doctors are removed from the system._
 
 **Acceptance Criteria:**
-- Admin dashboard must display the appointment list.
-- Filters by date and doctor must be available.
+1. Admin must be logged in.
+2. System must confirm deletion before proceeding.
+3. Doctor record must be removed or marked inactive in MySQL.
+4. Deleted doctor must no longer appear in search or booking lists.
+
+**Priority:** Medium  
+**Story Points:** 5  
+
+**Notes:**
+- Consider soft delete instead of permanent delete.
+- Check for existing appointments before deletion.
 
 ---
 
-# 3. Patient User Stories
+## User Story 5: Run Stored Procedure for Appointment Statistics
 
-## Epic: Appointment Management
-
-### US-PAT-01 – Patient Registration
-As a Patient,  
-I want to register in the portal,  
-So that I can book appointments.
+**Title:**  
+_As an Admin, I want to run a stored procedure in MySQL CLI to retrieve the number of appointments per month, so that I can track usage statistics._
 
 **Acceptance Criteria:**
-- Registration form must validate input fields.
-- Patient data must be stored in the MySQL database.
-- Confirmation message must be displayed.
+1. Stored procedure must return appointment count grouped by month.
+2. Procedure must execute successfully from MySQL CLI.
+3. Results must accurately reflect data in the appointments table.
+4. Output must be readable and properly formatted.
+
+**Priority:** Medium  
+**Story Points:** 8  
+
+**Notes:**
+- Stored procedure should use GROUP BY month and year.
+- Ensure proper indexing for performance.
+- This is a database-level task (outside the Spring Boot application).
+
+
+# Exercise 3: Define Patient User Stories
 
 ---
 
-### US-PAT-02 – Secure Login
-As a Patient,  
-I want to log in securely,  
-So that my medical data remains protected.
+## User Story 1: View Doctors Without Login
+
+**Title:**  
+_As a Patient, I want to view a list of doctors without logging in, so that I can explore options before registering._
 
 **Acceptance Criteria:**
-- Authentication must be required.
-- Error message must be displayed for incorrect credentials.
+1. Doctor list must be accessible without authentication.
+2. Doctor information must include name, specialization, and availability.
+3. Sensitive information must not be displayed.
+4. Page must load successfully for guest users.
+
+**Priority:** High  
+**Story Points:** 3  
+
+**Notes:**
+- Public endpoint required.
+- Do not expose contact or internal data.
 
 ---
 
-### US-PAT-03 – View Doctor Availability
-As a Patient,  
-I want to view available doctors and time slots,  
-So that I can choose a convenient appointment time.
+## User Story 2: Patient Sign Up
+
+**Title:**  
+_As a Patient, I want to sign up using my email and password, so that I can book appointments._
 
 **Acceptance Criteria:**
-- Available slots must be displayed dynamically.
-- Only free slots must be selectable.
+1. Registration form must validate required fields.
+2. Email address must be unique.
+3. Password must be securely stored (encrypted).
+4. Patient data must be stored in the MySQL database.
+5. Confirmation message must be displayed after successful registration.
+
+**Priority:** High  
+**Story Points:** 5  
+
+**Notes:**
+- Consider email format validation.
+- Assign default role as "PATIENT".
 
 ---
 
-### US-PAT-04 – Book Appointment
-As a Patient,  
-I want to book an appointment,  
-So that I can consult a doctor.
+## User Story 3: Patient Login
+
+**Title:**  
+_As a Patient, I want to log into the portal, so that I can manage my bookings._
 
 **Acceptance Criteria:**
-- Appointment must not conflict with existing bookings.
-- Appointment must be stored in the MySQL database.
-- Confirmation message must be displayed.
+1. Patient must provide valid email and password.
+2. Credentials must be verified against the database.
+3. Patient dashboard must be displayed upon successful login.
+4. Error message must be displayed for invalid credentials.
+
+**Priority:** High  
+**Story Points:** 3  
+
+**Notes:**
+- Authentication mechanism must be secure.
+- Session management required.
 
 ---
 
-### US-PAT-05 – Cancel Appointment
-As a Patient,  
-I want to cancel my appointment,  
-So that the slot becomes available for others.
+## User Story 4: Patient Logout
+
+**Title:**  
+_As a Patient, I want to log out of the portal, so that I can secure my account._
 
 **Acceptance Criteria:**
-- Appointment status must be updated.
-- The slot must become available again.
+1. Logout option must be available on the dashboard.
+2. User session must be invalidated after logout.
+3. Patient must be redirected to the login or home page.
+4. Secured pages must not be accessible after logout.
+
+**Priority:** High  
+**Story Points:** 2  
+
+**Notes:**
+- Prevent back-button access after logout.
+- Clear authentication token/session.
 
 ---
 
-### US-PAT-06 – View Prescriptions
-As a Patient,  
-I want to view my prescriptions,  
-So that I can access my medical records anytime.
+## User Story 5: Book One-Hour Appointment
+
+**Title:**  
+_As a Patient, I want to log in and book a one-hour appointment with a doctor, so that I can consult for medical advice._
 
 **Acceptance Criteria:**
-- Prescription data must be retrieved from MongoDB.
-- Only the authorized patient must access their data.
+1. Patient must be logged in.
+2. Only available time slots must be selectable.
+3. Appointment duration must be one hour.
+4. Appointment must not conflict with existing bookings.
+5. Appointment must be stored in the MySQL database.
+6. Confirmation message must be displayed.
+
+**Priority:** High  
+**Story Points:** 8  
+
+**Notes:**
+- Prevent double booking.
+- Automatically block selected time slot after booking.
 
 ---
 
-# 4. Doctor User Stories
+## User Story 6: View Upcoming Appointments
 
-## Epic: Schedule & Prescription Management
-
-### US-DOC-01 – Set Availability
-As a Doctor,  
-I want to define my available time slots,  
-So that patients can book appointments accordingly.
+**Title:**  
+_As a Patient, I want to view my upcoming appointments, so that I can prepare accordingly._
 
 **Acceptance Criteria:**
-- Doctor must be able to add or edit time slots.
-- Slots must be stored in the MySQL database.
-- Only future dates must be allowed.
+1. Patient must be logged in.
+2. Only future appointments must be displayed.
+3. Appointment details must include date, time, and doctor name.
+4. Appointments must be sorted by nearest date first.
+
+**Priority:** Medium  
+**Story Points:** 5  
+
+**Notes:**
+- Data must be filtered using patient ID.
+- Past appointments should not appear in upcoming list.
+
+# Exercise 4: Define Doctor User Stories
 
 ---
 
-### US-DOC-02 – View Scheduled Appointments
-As a Doctor,  
-I want to view my appointments,  
-So that I can prepare for consultations.
+## User Story 1: Doctor Login
+
+**Title:**  
+_As a Doctor, I want to log into the portal, so that I can manage my appointments._
 
 **Acceptance Criteria:**
-- Dashboard must display the appointment list.
-- Appointments must be sorted by date and time.
+1. Doctor must provide valid email/username and password.
+2. Credentials must be authenticated against the database.
+3. Doctor dashboard must be displayed upon successful login.
+4. Error message must be shown for invalid credentials.
+
+**Priority:** High  
+**Story Points:** 3  
+
+**Notes:**
+- Password must be encrypted in the database.
+- Secure session handling must be implemented.
 
 ---
 
-### US-DOC-03 – Create Prescription
-As a Doctor,  
-I want to create prescriptions for patients,  
-So that treatment details are recorded.
+## User Story 2: Doctor Logout
+
+**Title:**  
+_As a Doctor, I want to log out of the portal, so that I can protect my data._
 
 **Acceptance Criteria:**
-- Prescription must be stored in MongoDB.
-- Prescription must be linked to the patient ID.
-- Prescription must be retrievable by the authorized patient.
+1. Logout option must be visible on the dashboard.
+2. Doctor session must be invalidated after logout.
+3. Doctor must be redirected to the login page.
+4. Secured pages must not be accessible after logout.
+
+**Priority:** High  
+**Story Points:** 2  
+
+**Notes:**
+- Prevent access using browser back button.
+- Clear session/token after logout.
 
 ---
 
-### US-DOC-04 – Update Prescription
-As a Doctor,  
-I want to update prescriptions if needed,  
-So that patient treatment information remains accurate.
+## User Story 3: View Appointment Calendar
+
+**Title:**  
+_As a Doctor, I want to view my appointment calendar, so that I can stay organized._
 
 **Acceptance Criteria:**
-- Only the assigned doctor must be able to modify the prescription.
-- Changes must be saved in MongoDB.
+1. Doctor must be logged in.
+2. Calendar must display appointments by date and time.
+3. Appointments must include patient name and time slot.
+4. Appointments must be sorted chronologically.
+
+**Priority:** High  
+**Story Points:** 5  
+
+**Notes:**
+- Calendar view can be daily/weekly format.
+- Data must be filtered using doctor ID.
 
 ---
 
-# 5. Definition of Done (DoD)
+## User Story 4: Mark Unavailability
 
-A user story will be considered complete when:
+**Title:**  
+_As a Doctor, I want to mark my unavailability, so that patients can see only available slots._
 
-- Code is implemented.
-- Unit testing is completed.
-- API endpoints are tested.
-- Database integration is verified.
-- Code is pushed to GitHub.
-- Reviewed and approved by the team.
+**Acceptance Criteria:**
+1. Doctor must be logged in.
+2. Doctor must be able to select date and time to mark unavailable.
+3. Unavailable slots must not appear in patient booking options.
+4. Changes must be stored in the MySQL database.
 
----
+**Priority:** High  
+**Story Points:** 5  
 
-# 6. Sprint Planning Note
-
-For Sprint 1, the recommended priority is:
-
-1. User Authentication (Admin, Doctor, Patient)
-2. Patient Registration
-3. Doctor Availability Management
-4. Appointment Booking
-5. Appointment Viewing
-
-Prescription management can be scheduled for Sprint 2.
+**Notes:**
+- Prevent marking past dates as unavailable.
+- Ensure no conflict with existing appointments.
 
 ---
 
-# 7. Conclusion
+## User Story 5: Update Profile Information
 
-These user stories define the functional backbone of the Patient Appointment Portal. They align with Agile methodology and will guide incremental development through sprints. The combination of MySQL (relational data) and MongoDB (prescription documents) ensures both structure and flexibility in system design.
+**Title:**  
+_As a Doctor, I want to update my specialization and contact information, so that patients have up-to-date information._
+
+**Acceptance Criteria:**
+1. Doctor must be logged in.
+2. Editable fields must include specialization and contact information.
+3. Updated data must be validated.
+4. Changes must be saved in the MySQL database.
+5. Updated information must reflect in the public doctor listing.
+
+**Priority:** Medium  
+**Story Points:** 5  
+
+**Notes:**
+- Email must remain unique.
+- Audit logging is recommended.
+
+---
+
+## User Story 6: View Patient Details for Upcoming Appointments
+
+**Title:**  
+_As a Doctor, I want to view patient details for upcoming appointments, so that I can be prepared._
+
+**Acceptance Criteria:**
+1. Doctor must be logged in.
+2. Only patients assigned to the doctor must be visible.
+3. Patient details must include name and appointment time.
+4. Access must be restricted to the authorized doctor only.
+
+**Priority:** High  
+**Story Points:** 8  
+
+**Notes:**
+- Ensure patient privacy compliance.
+- Data must be filtered using doctor ID.
