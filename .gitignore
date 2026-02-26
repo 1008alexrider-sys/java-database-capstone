@@ -135,3 +135,5 @@ dmypy.json
 /.idea/misc.xml
 /.idea/modules.xml
 /.idea/vcs.xml
+/app/src/main/resources/application-dev.properties
+/app/src/main/resources/application-prod.properties
