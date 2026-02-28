@@ -3,11 +3,17 @@ package com.project.back_end.models;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "admins")
 @Builder
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Admin {
 
     @Id
@@ -23,8 +29,6 @@ public class Admin {
     @Column(nullable = false)
     private String password;
 
-    public Admin() {
-    }
 
     public Admin(String username, String password) {
         this.username = username;

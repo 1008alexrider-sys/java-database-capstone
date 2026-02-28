@@ -1,0 +1,453 @@
+[
+  {
+    "patientName": "John Smith",
+    "appointmentId": 26,
+    "medication": "Lisinopril",
+    "dosage": "10mg once daily",
+    "doctorNotes": "For high blood pressure management. Follow-up in 2 weeks.",
+    "refillCount": 3,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Emily Rose",
+    "appointmentId": 27,
+    "medication": "Amitriptyline",
+    "dosage": "25mg at bedtime",
+    "doctorNotes": "For migraine prevention. Monitor for side effects.",
+    "refillCount": 2,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "Michael Jordan",
+    "appointmentId": 28,
+    "medication": "Ibuprofen",
+    "dosage": "400mg every 6 hours as needed",
+    "doctorNotes": "For pain management. Do not exceed 3200mg per day.",
+    "refillCount": 1,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Olivia Moon",
+    "appointmentId": 29,
+    "medication": "Amoxicillin",
+    "dosage": "500mg twice daily for 10 days",
+    "doctorNotes": "Antibiotic for respiratory infection. Complete full course.",
+    "refillCount": 0,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Liam King",
+    "appointmentId": 30,
+    "medication": "Hydrocortisone Cream",
+    "dosage": "1% apply twice daily to affected area",
+    "doctorNotes": "For skin allergy relief. Avoid prolonged use.",
+    "refillCount": 2,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Sophia Lane",
+    "appointmentId": 31,
+    "medication": "Metoprolol",
+    "dosage": "50mg twice daily",
+    "doctorNotes": "For cardiac assessment follow-up. Monitor heart rate.",
+    "refillCount": 3,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "Noah Brooks",
+    "appointmentId": 32,
+    "medication": "Sumatriptan",
+    "dosage": "50mg as needed for migraine",
+    "doctorNotes": "For acute migraine treatment. Use within 30 min of onset.",
+    "refillCount": 2,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Ava Daniels",
+    "appointmentId": 33,
+    "medication": "Naproxen",
+    "dosage": "250mg twice daily as needed",
+    "doctorNotes": "For joint pain diagnosis. Take with food.",
+    "refillCount": 1,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "William Harris",
+    "appointmentId": 34,
+    "medication": "Acetaminophen",
+    "dosage": "500mg every 4-6 hours as needed",
+    "doctorNotes": "For child fever treatment. Do not exceed 5 doses per day.",
+    "refillCount": 0,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Mia Green",
+    "appointmentId": 35,
+    "medication": "Cetirizine",
+    "dosage": "10mg once daily",
+    "doctorNotes": "For skin allergy treatment. May cause drowsiness.",
+    "refillCount": 3,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "James Brown",
+    "appointmentId": 36,
+    "medication": "Atorvastatin",
+    "dosage": "20mg once daily",
+    "doctorNotes": "For heart health follow-up. Regular cholesterol checks needed.",
+    "refillCount": 3,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Amelia Clark",
+    "appointmentId": 37,
+    "medication": "Sertraline",
+    "dosage": "50mg once daily",
+    "doctorNotes": "For neurological therapy. Take at same time daily.",
+    "refillCount": 2,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Ben Johnson",
+    "appointmentId": 38,
+    "medication": "Calcium Citrate",
+    "dosage": "500mg twice daily",
+    "doctorNotes": "For fracture recovery. Supports bone healing.",
+    "refillCount": 4,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Ella Monroe",
+    "appointmentId": 39,
+    "medication": "Vitamin D3",
+    "dosage": "1000 IU daily",
+    "doctorNotes": "For pediatric wellness support. Important for growth.",
+    "refillCount": 2,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "Lucas Turner",
+    "appointmentId": 40,
+    "medication": "Fluocinonide Cream",
+    "dosage": "0.05% apply twice daily",
+    "doctorNotes": "For skin condition. Avoid application on face.",
+    "refillCount": 1,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Grace Scott",
+    "appointmentId": 41,
+    "medication": "Aspirin",
+    "dosage": "81mg once daily",
+    "doctorNotes": "For cardiology follow-up. Heart disease prevention.",
+    "refillCount": 3,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Ethan Hill",
+    "appointmentId": 42,
+    "medication": "Citalopram",
+    "dosage": "20mg once daily",
+    "doctorNotes": "For neurology review. Regular mood monitoring recommended.",
+    "refillCount": 2,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Ruby Ward",
+    "appointmentId": 43,
+    "medication": "Diclofenac",
+    "dosage": "50mg twice daily for 7 days",
+    "doctorNotes": "For orthopedic therapy session. Anti-inflammatory agent.",
+    "refillCount": 0,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "Jack Baker",
+    "appointmentId": 44,
+    "medication": "Azithromycin",
+    "dosage": "250mg once daily for 5 days",
+    "doctorNotes": "For child vaccination follow-up. Antibiotic course.",
+    "refillCount": 0,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Mia Hall",
+    "appointmentId": 45,
+    "medication": "Tretinoin Cream",
+    "dosage": "0.025% apply at bedtime",
+    "doctorNotes": "For dermatology treatment. Avoid sun exposure.",
+    "refillCount": 1,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Owen Thomas",
+    "appointmentId": 46,
+    "medication": "Bisoprolol",
+    "dosage": "5mg once daily",
+    "doctorNotes": "For cardiac stress test follow-up. Heart rate management.",
+    "refillCount": 3,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Ivy Jackson",
+    "appointmentId": 47,
+    "medication": "Gabapentin",
+    "dosage": "300mg three times daily",
+    "doctorNotes": "For neurological scan review. Nerve pain management.",
+    "refillCount": 2,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "Leo Martin",
+    "appointmentId": 48,
+    "medication": "Meloxicam",
+    "dosage": "7.5mg once daily",
+    "doctorNotes": "For orthopedic surgery follow-up. NSAID for inflammation.",
+    "refillCount": 2,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Ella Moore",
+    "appointmentId": 49,
+    "medication": "Amoxicillin-Clavulanate",
+    "dosage": "250mg three times daily for 10 days",
+    "doctorNotes": "For pediatric checkup. Antibiotic with clavulanic acid.",
+    "refillCount": 0,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Jane Doe",
+    "appointmentId": 50,
+    "medication": "Miconazole Cream",
+    "dosage": "2% apply twice daily",
+    "doctorNotes": "For dermatology routine. Antifungal treatment.",
+    "refillCount": 1,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "John Smith",
+    "appointmentId": 1,
+    "medication": "Ramipril",
+    "dosage": "5mg once daily",
+    "doctorNotes": "ACE inhibitor for hypertension. Monitor kidney function.",
+    "refillCount": 2,
+    "pharmacyName": "Walgreens Downtown"
+  },
+  {
+    "patientName": "Emily Rose",
+    "appointmentId": 2,
+    "medication": "Propranolol",
+    "dosage": "40mg twice daily",
+    "doctorNotes": "Beta blocker for migraine prophylaxis. Avoid abrupt discontinuation.",
+    "refillCount": 3,
+    "pharmacyName": "CVS Pharmacy"
+  },
+  {
+    "patientName": "Michael Jordan",
+    "appointmentId": 3,
+    "medication": "Oxycodone",
+    "dosage": "5mg every 6 hours as needed",
+    "doctorNotes": "Opioid for severe pain. Use caution with alcohol.",
+    "refillCount": 0,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Olivia Moon",
+    "appointmentId": 4,
+    "medication": "Ciprofloxacin",
+    "dosage": "500mg twice daily for 7 days",
+    "doctorNotes": "Antibiotic for bacterial infection. Maintain hydration.",
+    "refillCount": 0,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Liam King",
+    "appointmentId": 5,
+    "medication": "Clotrimazole",
+    "dosage": "1% apply twice daily",
+    "doctorNotes": "Antifungal cream for skin infection. Keep area dry.",
+    "refillCount": 1,
+    "pharmacyName": "CVS Pharmacy"
+  },
+  {
+    "patientName": "Sophia Lane",
+    "appointmentId": 6,
+    "medication": "Verapamil",
+    "dosage": "80mg three times daily",
+    "doctorNotes": "Calcium channel blocker for cardiac arrhythmia. Monitor BP.",
+    "refillCount": 3,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "Noah Brooks",
+    "appointmentId": 7,
+    "medication": "Topiramate",
+    "dosage": "25mg once daily",
+    "doctorNotes": "For migraine prevention. May cause weight loss.",
+    "refillCount": 2,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Ava Daniels",
+    "appointmentId": 8,
+    "medication": "Indomethacin",
+    "dosage": "25mg three times daily",
+    "doctorNotes": "NSAID for joint inflammation. Take with food.",
+    "refillCount": 1,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "William Harris",
+    "appointmentId": 9,
+    "medication": "Paracetamol",
+    "dosage": "250mg every 4-6 hours",
+    "doctorNotes": "Fever reducer for pediatric use. Max 5 doses per day.",
+    "refillCount": 0,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Mia Green",
+    "appointmentId": 10,
+    "medication": "Loratadine",
+    "dosage": "10mg once daily",
+    "doctorNotes": "Non-drowsy antihistamine. Take in morning.",
+    "refillCount": 2,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "James Brown",
+    "appointmentId": 11,
+    "medication": "Simvastatin",
+    "dosage": "20mg once daily",
+    "doctorNotes": "Statin for cholesterol management. Avoid grapefruit.",
+    "refillCount": 3,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Amelia Clark",
+    "appointmentId": 12,
+    "medication": "Fluoxetine",
+    "dosage": "20mg once daily",
+    "doctorNotes": "SSRI for depression. May take 2-4 weeks to work.",
+    "refillCount": 2,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Ben Johnson",
+    "appointmentId": 13,
+    "medication": "Magnesium Glycinate",
+    "dosage": "400mg twice daily",
+    "doctorNotes": "Mineral supplement for bone health. Take away from other meds.",
+    "refillCount": 3,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Ella Monroe",
+    "appointmentId": 14,
+    "medication": "Multivitamin",
+    "dosage": "One tablet daily with breakfast",
+    "doctorNotes": "Pediatric multivitamin for nutritional support.",
+    "refillCount": 2,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "Lucas Turner",
+    "appointmentId": 15,
+    "medication": "Mometasone Furoate",
+    "dosage": "0.1% apply twice daily",
+    "doctorNotes": "Topical steroid for dermatitis. Avoid prolonged use.",
+    "refillCount": 1,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Grace Scott",
+    "appointmentId": 16,
+    "medication": "Clopidogrel",
+    "dosage": "75mg once daily",
+    "doctorNotes": "Antiplatelet agent for cardiac protection. Do not skip doses.",
+    "refillCount": 3,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Ethan Hill",
+    "appointmentId": 17,
+    "medication": "Paroxetine",
+    "dosage": "20mg once daily",
+    "doctorNotes": "SSRI for anxiety disorder. Gradual tapering needed.",
+    "refillCount": 2,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Ruby Ward",
+    "appointmentId": 18,
+    "medication": "Piroxicam",
+    "dosage": "20mg once daily",
+    "doctorNotes": "NSAID for chronic pain. Monitor GI symptoms.",
+    "refillCount": 1,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "Jack Baker",
+    "appointmentId": 19,
+    "medication": "Amoxicillin Pediatric",
+    "dosage": "250mg twice daily for 10 days",
+    "doctorNotes": "Antibiotic for ear infection. Shake suspension well.",
+    "refillCount": 0,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Mia Hall",
+    "appointmentId": 20,
+    "medication": "Salicylic Acid",
+    "dosage": "2% apply at bedtime",
+    "doctorNotes": "Keratolytic for acne. May cause dryness.",
+    "refillCount": 1,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Owen Thomas",
+    "appointmentId": 21,
+    "medication": "Diltiazem",
+    "dosage": "60mg three times daily",
+    "doctorNotes": "Calcium blocker for angina. May cause dizziness.",
+    "refillCount": 3,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  },
+  {
+    "patientName": "Ivy Jackson",
+    "appointmentId": 22,
+    "medication": "Pregabalin",
+    "dosage": "75mg twice daily",
+    "doctorNotes": "For neuropathic pain. May cause drowsiness.",
+    "refillCount": 2,
+    "pharmacyName": "Walgreens Main Street"
+  },
+  {
+    "patientName": "Leo Martin",
+    "appointmentId": 23,
+    "medication": "Celecoxib",
+    "dosage": "100mg twice daily",
+    "doctorNotes": "COX-2 inhibitor for arthritis. Take with food.",
+    "refillCount": 2,
+    "pharmacyName": "Rite Aid Pharmacy"
+  },
+  {
+    "patientName": "Ella Moore",
+    "appointmentId": 24,
+    "medication": "Azithromycin Suspension",
+    "dosage": "10mg/kg once daily for 3 days",
+    "doctorNotes": "Antibiotic for bronchitis. Shake well before use.",
+    "refillCount": 0,
+    "pharmacyName": "Costco Pharmacy"
+  },
+  {
+    "patientName": "Jane Doe",
+    "appointmentId": 25,
+    "medication": "Ketoconazole Cream",
+    "dosage": "2% apply once daily",
+    "doctorNotes": "Antifungal for ringworm. Continue for 2 weeks after healing.",
+    "refillCount": 1,
+    "pharmacyName": "CVS Pharmacy Downtown"
+  }
+]
+

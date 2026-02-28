@@ -4,7 +4,10 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.time.LocalDate;
@@ -13,6 +16,9 @@ import java.time.LocalTime;
 @Builder
 @Entity
 @Table(name = "appointments")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Appointment {
 
     @Id
@@ -47,8 +53,6 @@ public class Appointment {
     @Column
     private String notes;
 
-    public Appointment() {
-    }
 
     public Appointment(Doctor doctor, Patient patient, LocalDateTime appointmentTime, int status, String reasonForVisit, String notes) {
         this.doctor = doctor;

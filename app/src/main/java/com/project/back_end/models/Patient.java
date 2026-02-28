@@ -2,13 +2,19 @@ package com.project.back_end.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Builder
 @Entity
 @Table(name = "patients")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Patient {
 
     @Id
@@ -58,8 +64,6 @@ public class Patient {
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, orphanRemoval = true)
     private java.util.List<Insurance> insurances;
 
-    public Patient() {
-    }
 
     public Patient(String name, String email, String password, String phone, String address, LocalDate dateOfBirth, String emergencyContact, String insuranceProvider) {
         this.name = name;
