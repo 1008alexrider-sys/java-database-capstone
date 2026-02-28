@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/.idea/compiler.xml
+/.idea/copilot.data.migration.ask2agent.xml
+/.idea/encodings.xml
+/.idea/jarRepositories.xml
+/.idea/java-database-capstone.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/app/src/main/resources/application-dev.properties
+/app/src/main/resources/application-prod.properties
