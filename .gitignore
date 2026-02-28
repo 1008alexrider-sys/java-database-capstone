@@ -137,3 +137,8 @@ dmypy.json
 /.idea/vcs.xml
 /app/src/main/resources/application-dev.properties
 /app/src/main/resources/application-prod.properties
+/app/src/main/resources/tst
+/.idea/jpa.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/dataSources.xml
+/.idea/sqldialects.xml
