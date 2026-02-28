@@ -1,12 +1,18 @@
 package com.project.back_end.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import jakarta.validation.constraints.*;
 
 @Builder
 @Document(collection = "prescriptions")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Prescription {
 
     @Id
@@ -35,9 +41,6 @@ public class Prescription {
 
     @Size(min = 3, max = 100, message = "Pharmacy name must be between 3 and 100 characters")
     private String pharmacyName;
-
-    public Prescription() {
-    }
 
     public Prescription(String patientName, Long appointmentId, String medication, String dosage, String doctorNotes, int refillCount, String pharmacyName) {
         this.patientName = patientName;

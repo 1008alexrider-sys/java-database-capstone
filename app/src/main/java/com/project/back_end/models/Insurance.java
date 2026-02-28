@@ -2,11 +2,17 @@ package com.project.back_end.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "insurance")
 @Builder
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Insurance {
 
     @Id
@@ -55,8 +61,6 @@ public class Insurance {
     @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")
     private boolean activeStatus = true;
 
-    public Insurance() {
-    }
 
     public Insurance(Patient patient, String insuranceCompany, String policyNumber, String groupNumber, String planType, Double copay, Double deductible, Double maxOutOfPocket, boolean activeStatus) {
         this.patient = patient;

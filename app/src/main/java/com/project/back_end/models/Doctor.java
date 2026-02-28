@@ -3,13 +3,19 @@ package com.project.back_end.models;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "doctors")
 @Builder
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Doctor {
 
     @Id
@@ -62,8 +68,6 @@ public class Doctor {
     @Column
     private Double rating;
 
-    public Doctor() {
-    }
 
     public Doctor(String name, String specialty, String email, String password, String phone, List<String> availableTimes, int yearsOfExperience, String clinicAddress, Double rating) {
         this.name = name;
