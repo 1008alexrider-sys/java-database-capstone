@@ -1,0 +1,67 @@
+.feedback-message {
+  min-height: 24px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2f3f4f;
+}
+
+.feedback-message.error {
+  color: #a01f1f;
+  background-color: #ffe9e9;
+}
+
+.feedback-message.info {
+  color: #015c5d;
+  background-color: #e7f7f7;
+}
+
+.result-summary {
+  font-size: 14px;
+  color: #2f3f4f;
+  margin-top: -8px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.status-badge.pending {
+  background-color: #fff1d6;
+  color: #8a6000;
+}
+
+.status-badge.consulted {
+  background-color: #dbf4e4;
+  color: #0f6a2d;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.pagination-controls .button {
+  background-color: #0e7c86;
+  color: #fff;
+}
+
+.pagination-controls .button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#pageIndicator {
+  font-size: 14px;
+  color: #2f3f4f;
+}
