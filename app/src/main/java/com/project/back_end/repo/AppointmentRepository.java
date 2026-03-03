@@ -24,11 +24,23 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
             "LEFT JOIN FETCH a.patient p " +
             "WHERE a.doctor.id = :doctorId AND LOWER(p.name) LIKE LOWER(CONCAT('%', :patientName, '%')) " +
             "AND a.appointmentTime BETWEEN :start AND :end")
+public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
+
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.doctor d LEFT JOIN FETCH d.availableTimes WHERE d.id = :doctorId AND a.appointmentTime BETWEEN :start AND :end")
+    List<Appointment> findByDoctorIdAndAppointmentTimeBetween(
+            @Param("doctorId") Long doctorId,
+            @Param("start") LocalDateTime start,
+            @Param("end") LocalDateTime end
+    );
+
+    @Query("SELECT a FROM Appointment a LEFT JOIN FETCH a.patient p LEFT JOIN FETCH a.doctor d WHERE d.id = :doctorId AND LOWER(p.name) LIKE LOWER(CONCAT('%', :patientName, '%')) AND a.appointmentTime BETWEEN :start AND :end")
     List<Appointment> findByDoctorIdAndPatient_NameContainingIgnoreCaseAndAppointmentTimeBetween(
             @Param("doctorId") Long doctorId,
             @Param("patientName") String patientName,
             @Param("start") LocalDateTime start,
             @Param("end") LocalDateTime end);
+            @Param("end") LocalDateTime end
+    );
 
     @Modifying
     @Transactional
@@ -53,4 +65,16 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
     @Transactional
     @Query("UPDATE Appointment a SET a.status = :status WHERE a.id = :id")
     void updateStatus(@Param("status") int status, @Param("id") long id);
+    @Query("SELECT a FROM Appointment a WHERE a.patient.id = :patientId AND LOWER(a.doctor.name) LIKE LOWER(CONCAT('%', :doctorName, '%'))")
+    List<Appointment> filterByDoctorNameAndPatientId(
+            @Param("doctorName") String doctorName,
+            @Param("patientId") Long patientId
+    );
+
+    @Query("SELECT a FROM Appointment a WHERE a.patient.id = :patientId AND a.status = :status AND LOWER(a.doctor.name) LIKE LOWER(CONCAT('%', :doctorName, '%'))")
+    List<Appointment> filterByDoctorNameAndPatientIdAndStatus(
+            @Param("doctorName") String doctorName,
+            @Param("patientId") Long patientId,
+            @Param("status") int status
+    );
 }
